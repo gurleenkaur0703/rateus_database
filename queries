@@ -1,18 +1,18 @@
-INSERT INTO User_ (User_ID, User_Name, Email, Contact, Password) 
-VALUES ('enter_UserID', 'enter_Name', 'enter_Email', 'enter_Contact', 'enter_Password');
-
-INSERT INTO Organisation (Org_ID, Org_Name, Owner_ID, Org_Address) 
+INSERT INTO Organisation (ID, Name, Owner_ID, Address) 
 VALUES ('enter_OrgID', 'enter_OrgName', 'enterOrg_OwnerID', 'enter_OrgAddress');
 
-SELECT User_ID, Contact, Password 
+INSERT INTO User_ (ID, Name, Email, Contact, Password) 
+VALUES ('enter_ID', 'enter_Name', 'enter_Email', 'enter_Contact', 'enter_Password');
+
+SELECT ID, Contact, Password 
 FROM User_ 
 WHERE Email = 'backend_provided';
 
-SELECT Org_ID, Org_Name 
+SELECT ID, Name 
 FROM Organization 
-WHERE Org_Name LIKE 'search%';
+WHERE Name LIKE 'search%';
 
-INSERT INTO Items (Items_ID, Item_Name, Org_ID) 
+INSERT INTO Items (ID, Item_Name, Org_ID) 
 VALUES ('Enter_ItemsID', 'Enter_ItemName', 'Enter_OrgID');
 
 INSERT INTO Reviews (Review_ID, Org_ID, Item_ID, Review) 
@@ -26,6 +26,5 @@ VALUES ('Enter_ItemID', 'Enter_Rating');
 
 INSERT INTO Sentimental_Scores (Review_ID, Sentimental_Score) 
 VALUES ('Enter_ReviewID', 'Enter_SentimentalScore');
-
 
 
