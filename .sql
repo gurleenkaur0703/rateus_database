@@ -26,3 +26,26 @@ Item_Name varchar(100),
 Org_ID varchar(10),
 Added_On DATE DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE Reviews (
+    Review_ID VARCHAR(10) PRIMARY KEY,
+    Org_ID VARCHAR(10),
+    Item_ID VARCHAR(10),
+    Review VARCHAR(100)
+);
+
+CREATE TABLE Ratings (
+    Rating_ID VARCHAR(10) PRIMARY KEY,
+    Item_ID VARCHAR(10),
+    Rating VARCHAR(10)
+);
+
+CREATE TABLE Aggregate_Ratings (
+    Item_ID VARCHAR(10) PRIMARY KEY,
+    Rating VARCHAR(10)
+);
+
+CREATE TABLE Sentimental_Scores (
+    Review_ID VARCHAR(10) PRIMARY KEY,
+    Sentimental_Score VARCHAR(100)
+);
