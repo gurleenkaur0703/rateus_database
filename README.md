@@ -37,6 +37,37 @@ Org_ID varchar(10),
 Added_On DATE DEFAULT CURRENT_TIMESTAMP
 );
 ```
+### Creating the Reviews Table
+```
+CREATE TABLE Reviews (
+    Review_ID VARCHAR(10) PRIMARY KEY,
+    Org_ID VARCHAR(10),
+    Item_ID VARCHAR(10),
+    Review VARCHAR(100)
+);
+```
+### Creating the Ratings Table
+```
+CREATE TABLE Ratings (
+    Rating_ID VARCHAR(10) PRIMARY KEY,
+    Item_ID VARCHAR(10),
+    Rating VARCHAR(10)
+);
+```
+### Creating the Aggregate_Ratings  Table
+```
+CREATE TABLE Aggregate_Ratings (
+    Item_ID VARCHAR(10) PRIMARY KEY,
+    Rating VARCHAR(10)
+);
+```
+### Creating the Sentimental_Scores Table
+```
+CREATE TABLE Sentimental_Scores (
+    Review_ID VARCHAR(10) PRIMARY KEY,
+    Sentimental_Score VARCHAR(100)
+);
+```
 ## Database Queries
 ### Inserting User Details
 ```
@@ -64,4 +95,24 @@ WHERE Org_Name LIKE 'search%';
 ```
 INSERT INTO Items (ID, Item_Name, Org_ID) 
 VALUES ('Enter_ID', 'Enter_Item', 'Enter_OrgID');
+```
+### Inserting Reviews Details
+```
+INSERT INTO Reviews (Review_ID, Org_ID, Item_ID, Review) 
+VALUES ('Enter_ReviewID', 'Enter_OrgID', 'Enter_ItemID', 'Enter_Review');
+```
+### Inserting Ratings Details
+```
+INSERT INTO Ratings (Rating_ID, Item_ID, Rating) 
+VALUES ('Enter_RatingID', 'Enter_ItemID', 'Enter_Rating');
+```
+### Inserting Aggregate_Ratings Details
+```
+INSERT INTO Aggregate_Ratings (Item_ID, Rating) 
+VALUES ('Enter_ItemID', 'Enter_Rating');
+```
+### Inserting Sentimental_Scores Details
+```
+INSERT INTO Sentimental_Scores (Review_ID, Sentimental_Score) 
+VALUES ('Enter_ReviewID', 'Enter_SentimentalScore');
 ```
