@@ -14,3 +14,18 @@ WHERE Org_Name LIKE 'search%';
 
 INSERT INTO Items (ID, Item_Name, Org_ID) 
 VALUES ('Enter_ID', 'Enter_Item', 'Enter_OrgID');
+
+INSERT INTO Reviews (Review_ID, Org_ID, Item_ID, Review) 
+VALUES ('Enter_ReviewID', 'Enter_OrgID', 'Enter_ItemID', 'Enter_Review');
+
+INSERT INTO Ratings (Rating_ID, Item_ID, Rating) 
+VALUES ('Enter_RatingID', 'Enter_ItemID', 'Enter_Rating');
+
+INSERT INTO Aggregate_Ratings (Item_ID, Rating) 
+VALUES ('Enter_ItemID', 'Enter_Rating');
+
+INSERT INTO Sentimental_Scores (Review_ID, Sentimental_Score) 
+VALUES ('Enter_ReviewID', 'Enter_SentimentalScore');
+
+
+
