@@ -31,10 +31,10 @@ CREATE TABLE User_(
 ### Creating the Items Table
 ```
 CREATE TABLE Items(
-Items_ID varchar(10) PRIMARY KEY,
-Item_Name varchar(100),
-Org_ID varchar(10),
-Added_On DATE DEFAULT CURRENT_TIMESTAMP
+    Items_ID varchar(10) PRIMARY KEY,
+    Item_Name varchar(100),
+    Org_ID varchar(10),
+    Added_On DATE DEFAULT CURRENT_TIMESTAMP
 );
 ```
 ### Creating the Reviews Table
